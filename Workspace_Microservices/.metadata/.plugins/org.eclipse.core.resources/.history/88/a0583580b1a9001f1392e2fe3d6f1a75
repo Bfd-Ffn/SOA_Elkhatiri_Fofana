@@ -1,0 +1,59 @@
+package fr.insa.mas.userManagementMS.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.sql.*;
+import java.sql.SQLException;
+
+import org.springframework.http.MediaType;
+
+import fr.insa.mas.userManagementMS.*;
+import fr.insa.mas.userManagementMS.model.User;
+import jakarta.websocket.server.PathParam;
+
+@RestController
+public class UserRessources {
+
+	@GetMapping(value="/users")
+public User getUser(@PathParam("id")int id) throws SQLException, ClassNotFoundException {
+		
+		ResultSet result = null ; 
+		Connection co = Sql_co.connection();
+		User user = null;
+		
+		/*try {
+			co = Sql_co.connection();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} */
+		
+		
+		String Query= "SELECT * FROM User WHERE id=" + id; 
+		try {
+			Statement stm = co.createStatement() ;
+			result = stm.executeQuery(Query) ; 
+			
+			if(result.next()) {
+				int Userid = result.getInt("id") ; 
+				String username = result.getString("username") ; 
+				String password = result.getString("password") ; 
+				int type = result.getInt("type") ; 
+				
+				user = new User(Userid,username,password,type); 
+				
+			}
+			
+			
+			
+		} catch (SQLException e) {
+			
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+		return user ; 
+		
+	}
+}

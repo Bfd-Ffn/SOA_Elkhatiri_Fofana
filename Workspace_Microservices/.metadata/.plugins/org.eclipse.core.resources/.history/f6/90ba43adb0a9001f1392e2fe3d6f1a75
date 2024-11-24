@@ -1,0 +1,29 @@
+package fr.insa.mas.userManagementMS.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.MediaType;
+
+
+import fr.insa.mas.userManagementMS.model.User;
+
+@RestController
+public class UserRessources {
+	@GetMapping("/users")
+	public int UserNumber() {
+		return 5;
+	}
+	@GetMapping(value="/users/{id}")
+	public User infoUser(@PathVariable int id) {
+		User user = new User(1,"walid","wld31",1);
+		return user;
+		
+	}
+	
+	@GetMapping(value="user/{id}",produces=MediaType.APPLICATION_XML_VALUE)
+	public User xmlInfoUser(@PathVariable int id) {
+		User user = new User(1,"walid","wld31",1);
+		return user;
+	}
+}

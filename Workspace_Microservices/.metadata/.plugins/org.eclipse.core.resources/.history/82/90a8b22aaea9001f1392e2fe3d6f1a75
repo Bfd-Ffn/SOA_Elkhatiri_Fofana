@@ -1,0 +1,4 @@
+package fr.insa.mas.userManagementMS.model;
+public class User {
+
+}
