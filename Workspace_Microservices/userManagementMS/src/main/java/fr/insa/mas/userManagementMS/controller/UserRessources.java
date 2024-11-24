@@ -4,8 +4,8 @@ import org.springframework.web.bind.annotation.*;
 
 
 import java.sql.*;
-import java.sql.SQLException;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.MediaType;
 
 import fr.insa.mas.userManagementMS.*;
@@ -13,15 +13,49 @@ import fr.insa.mas.userManagementMS.model.User;
 
 @RestController
 public class UserRessources {
+	@Value("${server.port}")
+	private String serverPort;
+	
+	@Value("${db.connection}")
+	private String typeConnectionDB;
+	
+	@Value("${db.host}")
+	private String dbHost;
+	
+	@Value("${db.port}")
+	private String dbPort;
+	
+	@Value("${db.uri}")
+	private String dbUri;
+	
+	@Value("${db.name}")
+	private String dbname;
+	
+	@Value("${db.login}")
+	private String dblogin;
+	
+	@Value("${db.pwd}")
+	private String dbpwd;
+	
+	
+	//Enable connection to database 
+	public Connection connection() throws SQLException, ClassNotFoundException  {
+		Class.forName("com.mysql.jdbc.Driver");
+		Connection conn = DriverManager.getConnection( dbUri, dblogin, dbpwd);
+		System.out.println ("connection successful");
+		return conn;	
+	}
+	
 
+	//Return user information by using Id
 	@GetMapping(value="/user/{id}")
 	public User getUser(@PathVariable int id) throws SQLException, ClassNotFoundException {
 		
 		ResultSet result = null ; 
-		Connection co = Sql_co.connection();
+		Connection co = connection();
 		User user = null;
 		
-		String Query= "SELECT * FROM User WHERE id=" + id; 
+		String Query= "SELECT * FROM User WHERE id= '" + id+"'"; 
 		try {
 			Statement stm = co.createStatement() ;
 			result = stm.executeQuery(Query) ; 
@@ -36,15 +70,15 @@ public class UserRessources {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} 
-		System.out.print("CALLED !!!!");
 		return user ; 
 		
 	}
 	
+	//UPdate user information by requesting the user( is full info )
 	@PutMapping("/user/update")
 	public User updateUser(@RequestBody User user) throws SQLException, ClassNotFoundException{
 		int result ; 
-		Connection co = Sql_co.connection();
+		Connection co = connection();
 		
 		 String Query = "UPDATE User SET username = '" + user.getUsername() + "', " +
                  "password = '" + user.getPassword() + "', " +
@@ -66,13 +100,14 @@ public class UserRessources {
 		return user ;	
 	}
 
+	//Delete user by using Id
 	@DeleteMapping("/user/delete/{id}")
 	public String deleteUser(@PathVariable int id) throws SQLException, ClassNotFoundException{
 		int success=0;
-		Connection co = Sql_co.connection();
+		Connection co = connection();
 		int result;
 		
-		String Query = "DELETE FROM User WHERE id = " + id;
+		String Query = "DELETE FROM User WHERE id = '" + id+"'";
 		try {
 			Statement stm = co.createStatement() ;
 			result = stm.executeUpdate(Query) ; 
