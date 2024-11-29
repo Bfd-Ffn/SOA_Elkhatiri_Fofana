@@ -40,7 +40,7 @@ public class UserRessources {
 	
 	//Enable connection to database 
 	public Connection connection() throws SQLException, ClassNotFoundException  {
-		Class.forName("com.mysql.jdbc.Driver");
+		Class.forName("com.mysql.cj.jdbc.Driver");
 		Connection conn = DriverManager.getConnection( dbUri, dblogin, dbpwd);
 		System.out.println ("connection successful");
 		return conn;	
@@ -74,7 +74,7 @@ public class UserRessources {
 		
 	}
 	
-	//UPdate user information by requesting the user( is full info )
+	//Update user information by requesting the user( is full info )
 	@PutMapping("/user/update")
 	public User updateUser(@RequestBody User user) throws SQLException, ClassNotFoundException{
 		int result ; 
