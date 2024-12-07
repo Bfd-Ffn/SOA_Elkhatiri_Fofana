@@ -8,6 +8,7 @@ import java.sql.*;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.MediaType;
 
+import fr.insa.mas.missionManagementMS.model.Mission;
 import fr.insa.mas.userManagementMS.*;
 import fr.insa.mas.userManagementMS.model.User;
 
@@ -47,6 +48,32 @@ public class UserRessources {
 	}
 	
 
+	
+	//add new User into the table by requesting the new user to add
+		@PostMapping("/user/add")
+		public User addMission(@RequestBody User user) throws SQLException, ClassNotFoundException{
+			int result ; 
+			Connection co = connection();
+			
+			String Query= "INSERT INTO User (`id`, `username`, `password`, `type`) VALUES"
+					+ " ('"+user.getId()+"', '"+user.getUsername()+"', '"
+						+user.getPassword()+"', '"+user.getType()+"');" ;              
+			try {
+				Statement stm = co.createStatement() ;
+				result = stm.executeUpdate(Query);
+				
+				if(result == 1) {
+					System.out.println("Insert User successful");
+				
+				}else {
+					System.out.println("Error insert User ");
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			} 
+			return user ;	
+		}
+		
 	//Return user information by using Id
 	@GetMapping(value="/user/{id}")
 	public User getUser(@PathVariable int id) throws SQLException, ClassNotFoundException {

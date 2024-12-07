@@ -2,6 +2,8 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\Users\Bafo\Desktop\5A\SOA_Elkhatiri_Fofana\Workspace_Microservices\ConfigServer"/>
+			<item value="C:\Users\Bafo\Desktop\5A\SOA_Elkhatiri_Fofana\Workspace_Microservices\EurekaUser"/>
 			<item value="/home/fofana/Bureau/5A/SOA/Git/SOA_Elkhatiri_Fofana/Workspace_Microservices/ConfigClient"/>
 			<item value="/home/fofana/Bureau/5A/SOA/Git/SOA_Elkhatiri_Fofana/Workspace_Microservices/ConfigServer"/>
 			<item value="/home/fofana/Bureau/5A/SOA/Workspace_Microservices/EurekaUser"/>

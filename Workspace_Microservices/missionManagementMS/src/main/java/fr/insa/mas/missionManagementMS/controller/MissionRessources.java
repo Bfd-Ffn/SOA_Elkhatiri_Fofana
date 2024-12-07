@@ -48,7 +48,33 @@ public class MissionRessources {
 		return conn;	
 	}
 	
-	//Return user information by using Id
+	//add new Mission into the table by requesting the new mission to add
+	@PostMapping("/mission/add")
+	public Mission addMission(@RequestBody Mission mission) throws SQLException, ClassNotFoundException{
+		int result ; 
+		Connection co = connection();
+		
+		String Query= "INSERT INTO Mission (`id`, `title`, `content`, `status`) VALUES"
+				+ " ('"+mission.getId()+"', '"+mission.getTitle()+"', '"
+					+mission.getContent()+"', '"+mission.getStatus()+"');" ;              
+		try {
+			Statement stm = co.createStatement() ;
+			result = stm.executeUpdate(Query);
+			
+			if(result == 1) {
+
+				System.out.println("Insert successful");
+			
+			}else {
+				System.out.println("Error insert User ");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} 
+		return mission ;	
+	}
+	
+	//Return mission information by using Id
 		@GetMapping(value="/mission/{id}")
 		public Mission getMission(@PathVariable int id) throws SQLException, ClassNotFoundException {
 			
@@ -76,5 +102,46 @@ public class MissionRessources {
 			
 		}
 		
+		//Update Mission information by requesting the new mission information
+		@PutMapping("/mission/update")
+		public Mission updateMission(@RequestBody Mission mission) throws SQLException, ClassNotFoundException{
+			int result ; 
+			Connection co = connection();
+			
+			 String Query = "UPDATE Mission SET title = '" + mission.getTitle() + "', " +
+	                 "content = '" + mission.getContent() + "', " +
+	                 "status = " + mission.getStatus() + " WHERE id = " + mission.getId();
+			try {
+				Statement stm = co.createStatement() ;
+				result = stm.executeUpdate(Query) ; 
+				if(result ==1) {
+					
+					System.out.println("Update successful");
+				
+				}	
+			} catch (SQLException e) {
+				e.printStackTrace();
+			} 
+			return mission ;	
+		}
+
+		//Delete mission by using Id
+		@DeleteMapping("/mission/delete/{id}")
+		public String deleteMission(@PathVariable int id) throws SQLException, ClassNotFoundException{
+			Connection co = connection();
+			int result;
+			
+			String Query = "DELETE FROM Mission WHERE id = '" + id+"'";
+			try {
+				Statement stm = co.createStatement() ;
+				result = stm.executeUpdate(Query) ; 
+				if(result ==1) {
+					return "delete Sucessful";
+				}	
+			} catch (SQLException e) {
+				e.printStackTrace();
+			} 
+			return "Impossible to delete";
+		}
 
 }
