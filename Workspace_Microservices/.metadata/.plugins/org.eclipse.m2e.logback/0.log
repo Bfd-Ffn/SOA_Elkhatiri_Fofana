@@ -8554,3 +8554,9 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact org.springfra
 2024-12-07 18:21:14,647 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
 2024-12-07 18:21:14,650 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
 2024-12-07 18:21:14,653 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Bafo\Desktop\5A\SOA_Elkhatiri_Fofana\Workspace_Microservices\missionManagementMS\src\test\resources
+2024-12-07 19:18:51,248 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-12-07 19:18:51,258 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-12-07 19:18:51,260 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Bafo\Desktop\5A\SOA_Elkhatiri_Fofana\Workspace_Microservices\userManagementMS\src\test\resources
+2024-12-07 19:25:58,003 [Worker-62: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-12-07 19:25:58,009 [Worker-62: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-12-07 19:25:58,012 [Worker-62: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Bafo\Desktop\5A\SOA_Elkhatiri_Fofana\Workspace_Microservices\userManagementMS\src\test\resources

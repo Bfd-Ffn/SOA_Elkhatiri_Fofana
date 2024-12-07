@@ -51,7 +51,7 @@ public class UserRessources {
 	
 	//add new User into the table by requesting the new user to add
 		@PostMapping("/user/add")
-		public User addMission(@RequestBody User user) throws SQLException, ClassNotFoundException{
+		public User addUser(@RequestBody User user) throws SQLException, ClassNotFoundException{
 			int result ; 
 			Connection co = connection();
 			
