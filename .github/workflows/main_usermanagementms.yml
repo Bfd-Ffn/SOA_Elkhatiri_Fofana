@@ -45,7 +45,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: java-app
-          path: Workspace_Microservices/userManagementMS/target/*.jar
+          path: '${{ github.workspace }}/Workspace_Microservices/userManagementMS/target/*.jar'
       
       - name: Login to Azure
         uses: azure/login@v2
