@@ -12,6 +12,10 @@ public class User {
 	
 	
 
+	public User() {
+		super();
+	}
+
 	public User(int userid, String username2, String password2, int type2) {
 		this.Id = userid;
 		this.Password = password2;

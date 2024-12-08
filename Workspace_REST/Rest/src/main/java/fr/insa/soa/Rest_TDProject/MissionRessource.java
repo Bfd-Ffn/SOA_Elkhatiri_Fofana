@@ -57,7 +57,7 @@ public class MissionRessource {
 					System.out.println("Insert successful");
 				
 				}else {
-					System.out.println("Error insert User ");
+					System.out.println("Error insert Mission ");
 				}
 			} catch (SQLException e) {
 				e.printStackTrace();
