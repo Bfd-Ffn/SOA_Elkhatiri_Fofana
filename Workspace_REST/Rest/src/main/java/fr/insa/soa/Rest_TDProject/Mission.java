@@ -11,6 +11,12 @@ public class Mission {
 	
 	
 
+	public Mission() {
+		super();
+	}
+
+
+
 	public String getTitle() {
 		return title;
 	}

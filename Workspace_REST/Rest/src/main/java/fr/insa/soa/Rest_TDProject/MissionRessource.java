@@ -42,27 +42,27 @@ public class MissionRessource {
 		@Consumes(MediaType.APPLICATION_JSON)
 		public Mission addMission(Mission mission) throws SQLException, ClassNotFoundException {
 			
-			ResultSet result = null ; 
+			int result ; 
 			Connection co = Sql_co.connection();
 			
-			
-			String Query= "INSERT INTO Mission (`id`, `title`, `content`, `status`) VALUES ('"+mission.getId()+"', '"+mission.getTitle()+"', '"+mission.getContent()+"', '"+mission.getStatus()+"');" ; 
+			String Query= "INSERT INTO Mission (`id`, `title`, `content`, `status`) VALUES"
+					+ " ('"+mission.getId()+"', '"+mission.getTitle()+"', '"
+						+mission.getContent()+"', '"+mission.getStatus()+"');" ;              
 			try {
 				Statement stm = co.createStatement() ;
-				result = stm.executeQuery(Query) ; 
+				result = stm.executeUpdate(Query);
 				
-				if(result.next()) {
-					int id1 = result.getInt("id") ; 
-					String title = result.getString("title") ; 
-					String content = result.getString("content") ; 
-					int status = result.getInt("status") ; 
-					
-					mission = new Mission(id1,title,content,status) ; 
+				if(result == 1) {
+
+					System.out.println("Insert successful");
+				
+				}else {
+					System.out.println("Error insert User ");
 				}
 			} catch (SQLException e) {
 				e.printStackTrace();
 			} 
-			return mission ; 
+			return mission ;	
 		}
 		
 
