@@ -3,11 +3,15 @@
 	<section name="WorkbenchPreferenceDialog.dialogBounds">
 		<item key="DIALOG_X_ORIGIN" value="161"/>
 		<item key="DIALOG_Y_ORIGIN" value="135"/>
-		<item key="DIALOG_WIDTH" value="661"/>
-		<item key="DIALOG_HEIGHT" value="561"/>
-		<item key="DIALOG_FONT_NAME" value="1|Sans|10.0|0|GTK|1|"/>
+		<item key="DIALOG_WIDTH" value="722"/>
+		<item key="DIALOG_HEIGHT" value="589"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
 	</section>
 	<section name="ImportExportAction">
+		<item key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID" value="org.eclipse.m2e.core.wizards.Maven2ImportWizard"/>
+		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
+			<item value="org.eclipse.m2e"/>
+		</list>
 		<section name="ImportExportWizard.dialogBounds">
 		</section>
 	</section>
