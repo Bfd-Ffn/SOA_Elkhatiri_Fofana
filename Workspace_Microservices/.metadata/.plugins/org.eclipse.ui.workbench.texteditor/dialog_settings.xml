@@ -2,9 +2,13 @@
 <section name="Workbench">
 	<item key="hasShownOverlayPopupBefore" value="true"/>
 	<item key="replaceBarOpen" value="false"/>
+	<list key="searchhistory">
+		<item value="missio"/>
+	</list>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="&#x09;user.setUsername(result.getString(&quot;username&quot;) ); "/>
+		<item key="selection" value="int id1 = result.getInt(&quot;id&quot;) ; "/>
 		<list key="findhistory">
+			<item value="int id1 = result.getInt(&quot;id&quot;) ; "/>
 			<item value="&#x09;user.setUsername(result.getString(&quot;username&quot;) ); "/>
 		</list>
 	</section>

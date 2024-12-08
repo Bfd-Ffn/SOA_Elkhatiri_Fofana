@@ -1,6 +1,2 @@
-INDEX VERSION 1.4+/home/fofana/Bureau/5A/SOA/Workspace_REST/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
-2366637472.index
-1999369472.index
-1948048712.index
-3609611094.index
-233623869.index
+INDEX VERSION 1.4+C:\Users\Bafo\Desktop\5A\SOA_Elkhatiri_Fofana\Workspace_REST\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1201898533.index
