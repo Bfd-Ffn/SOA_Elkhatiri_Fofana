@@ -29,7 +29,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: java-app
-          path: '${{ github.workspace }}/Workspace_Microservices/userManagementMS/target/*.jar'
+          path: 'Workspace_Microservices/userManagementMS/target/*.jar'
 
   deploy:
     runs-on: ubuntu-latest
