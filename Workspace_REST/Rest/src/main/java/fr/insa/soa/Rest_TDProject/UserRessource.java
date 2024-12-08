@@ -15,16 +15,7 @@ public class UserRessource {
 		ResultSet result = null ; 
 		Connection co = Sql_co.connection();
 		User user = null;
-		
-		/*try {
-			co = Sql_co.connection();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} */
-		
-		
-		String Query= "SELECT * FROM User WHERE id=" + id; 
+	String Query= "SELECT * FROM User WHERE id=" + id; 
 		try {
 			Statement stm = co.createStatement() ;
 			result = stm.executeQuery(Query) ; 
@@ -36,14 +27,10 @@ public class UserRessource {
 				int type = result.getInt("type") ; 
 				
 				user = new User(Userid,username,password,type); 
-				
 			}
-			
-			
 			
 		} catch (SQLException e) {
 			
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} 
 		return user ; 
