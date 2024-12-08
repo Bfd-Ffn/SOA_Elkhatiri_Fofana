@@ -9346,3 +9346,8 @@ Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: Duplicated 
 2024-12-08 20:32:48,326 [Worker-93: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
 2024-12-08 20:32:48,329 [Worker-93: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Bafo\Desktop\5A\SOA_Elkhatiri_Fofana\Workspace_Microservices\userManagementMS\src\test\resources
 2024-12-08 20:38:27,712 [Worker-96: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-12-08 20:38:27,721 [Worker-96: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-12-08 20:38:27,723 [Worker-96: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Bafo\Desktop\5A\SOA_Elkhatiri_Fofana\Workspace_Microservices\userManagementMS\src\test\resources
+2024-12-08 20:38:58,536 [Worker-93: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-12-08 20:38:58,541 [Worker-93: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-12-08 20:38:58,543 [Worker-93: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Bafo\Desktop\5A\SOA_Elkhatiri_Fofana\Workspace_Microservices\userManagementMS\src\test\resources
