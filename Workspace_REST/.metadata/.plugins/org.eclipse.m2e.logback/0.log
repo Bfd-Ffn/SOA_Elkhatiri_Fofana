@@ -703,3 +703,5 @@ org.apache.maven.project.ProjectBuildingException: Some problems were encountere
 2024-12-08 19:24:53,070 [Worker-62: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Bafo\Desktop\5A\SOA_Elkhatiri_Fofana\Workspace_REST\Rest\src\test\resources
 2024-12-08 19:26:10,116 [Worker-70: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Bafo\Desktop\5A\SOA_Elkhatiri_Fofana\Workspace_REST\Rest\src\main\resources
 2024-12-08 19:26:10,118 [Worker-70: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Bafo\Desktop\5A\SOA_Elkhatiri_Fofana\Workspace_REST\Rest\src\test\resources
+2024-12-08 19:46:15,293 [Worker-76: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Bafo\Desktop\5A\SOA_Elkhatiri_Fofana\Workspace_REST\Rest\src\main\resources
+2024-12-08 19:46:15,295 [Worker-76: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Bafo\Desktop\5A\SOA_Elkhatiri_Fofana\Workspace_REST\Rest\src\test\resources
