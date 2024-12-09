@@ -47,7 +47,11 @@ public class UserRessources {
 		return conn;	
 	}
 	
-
+		@GetMapping("/test")
+		public String testAzure() {
+			
+			return "LE test de notre service deployer avec Azure marche c'est parfait !!!";
+		}
 	
 	//add new User into the table by requesting the new user to add
 		@PostMapping("/user/add")
