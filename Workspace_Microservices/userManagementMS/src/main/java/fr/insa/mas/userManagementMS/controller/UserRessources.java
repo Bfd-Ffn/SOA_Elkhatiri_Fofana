@@ -17,19 +17,19 @@ public class UserRessources {
 	//@Value("${server.port}")
 	private String serverPort;
 	
-	@Value("${db.connection}")
+	//@Value("${db.connection}")
 	private String typeConnectionDB;
 	
-	@Value("${db.host}")
+	//@Value("${db.host}")
 	private String dbHost;
 	
-	@Value("${db.port}")
+	//@Value("${db.port}")
 	private String dbPort;
 	
 	//@Value("${db.uri}")
 	private String dbUri ="jdbc:mysql://srv-bdens.insa-toulouse.fr:3306/projet_gei_053";
 	
-	@Value("${db.name}")
+	//@Value("${db.name}")
 	private String dbname;
 	
 //	@Value("${db.login}")
