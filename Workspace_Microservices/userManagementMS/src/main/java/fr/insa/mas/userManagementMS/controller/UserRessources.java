@@ -14,7 +14,7 @@ import fr.insa.mas.userManagementMS.model.User;
 
 @RestController
 public class UserRessources {
-	@Value("${server.port}")
+	//@Value("${server.port}")
 	private String serverPort;
 	
 	@Value("${db.connection}")
@@ -26,17 +26,17 @@ public class UserRessources {
 	@Value("${db.port}")
 	private String dbPort;
 	
-	@Value("${db.uri}")
-	private String dbUri;
+	//@Value("${db.uri}")
+	private String dbUri ="jdbc:mysql://srv-bdens.insa-toulouse.fr:3306/projet_gei_053";
 	
 	@Value("${db.name}")
 	private String dbname;
 	
-	@Value("${db.login}")
-	private String dblogin;
+//	@Value("${db.login}")
+	private String dblogin = "projet_gei_053";
 	
-	@Value("${db.pwd}")
-	private String dbpwd;
+//	@Value("${db.pwd}")
+	private String dbpwd ="Aarei9hi";
 	
 	
 	//Enable connection to database 
