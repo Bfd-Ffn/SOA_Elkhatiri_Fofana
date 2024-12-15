@@ -5,7 +5,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name="Mission")
 public class Mission {
 	
-	
 	private String title ; 
 	
 	private String content ; 
@@ -13,18 +12,46 @@ public class Mission {
 	private int status ; 
 	
 	private int Id ;
+	private int Id_Helper;
+	private int Id_Asking;
 	
 	
-
-	public Mission(int missionid, String title, String content, int status) {
+	public Mission(int missionid, String title, String content, int status, int Id_Asking,int Id_Helper) {
 		this.Id=missionid;
 		this.title = title;
 		this.content = content;
 		this.status = status;
+		this.Id_Asking= Id_Asking;
+		this.Id_Helper = Id_Helper;
 	}
+
+
 	public Mission() {
-		
 	}
+
+
+	public int getId_Helper() {
+		return Id_Helper;
+	}
+
+
+
+	public void setId_Helper(int id_Helper) {
+		Id_Helper = id_Helper;
+	}
+
+
+
+	public int getId_Asking() {
+		return Id_Asking;
+	}
+
+
+
+	public void setId_Asking(int iD_Asking) {
+		Id_Asking = iD_Asking;
+	}
+
 
 	public String getTitle() {
 		return title;
@@ -75,5 +102,5 @@ public class Mission {
 
 
 
-
 }
+

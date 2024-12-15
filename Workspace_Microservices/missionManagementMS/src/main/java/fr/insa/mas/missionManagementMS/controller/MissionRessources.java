@@ -54,9 +54,10 @@ public class MissionRessources {
 		int result ; 
 		Connection co = connection();
 		
-		String Query= "INSERT INTO Mission (`id`, `title`, `content`, `status`) VALUES"
+
+		String Query= "INSERT INTO Mission (`id`, `title`, `content`, `status`,`id_helper`,`id_asking`) VALUES"
 				+ " ('"+mission.getId()+"', '"+mission.getTitle()+"', '"
-					+mission.getContent()+"', '"+mission.getStatus()+"');" ;              
+					+mission.getContent()+"', '"+mission.getStatus()+"', '"+mission.getId_Asking()+"', '"+mission.getId_Asking()+"');" ;       
 		try {
 			Statement stm = co.createStatement() ;
 			result = stm.executeUpdate(Query);
@@ -66,10 +67,10 @@ public class MissionRessources {
 				System.out.println("Insert successful");
 			
 			}else {
-				System.out.println("Error insert User ");
+				System.out.println("Error insert Mission ");
 			}
 		} catch (SQLException e) {
-			e.printStackTrace();
+			System.out.println("Error insert Mission:   "+ e.getMessage());
 		} 
 		return mission ;	
 	}
@@ -92,11 +93,12 @@ public class MissionRessources {
 					String title = result.getString("title") ; 
 					String content = result.getString("content") ; 
 					int status = result.getInt("status") ; 
-					
-					mission = new Mission(id1,title,content,status) ; 
+					int id_helper = result.getInt("id_helper");
+					int id_asking = result.getInt("id_asking");
+					mission = new Mission(id1,title,content,status,id_helper,id_asking) ;
 				}
 			} catch (SQLException e) {
-				e.printStackTrace();
+				System.out.println("Error insert Mission:   "+ e.getMessage());
 			} 
 			return mission ; 
 			
@@ -110,7 +112,7 @@ public class MissionRessources {
 			
 			 String Query = "UPDATE Mission SET title = '" + mission.getTitle() + "', " +
 	                 "content = '" + mission.getContent() + "', " +
-	                 "status = " + mission.getStatus() + " WHERE id = " + mission.getId();
+	                 "status = " + mission.getStatus() + "id_helper = " + mission.getId_Helper() + "id_asking = " + mission.getId_Asking() + " WHERE id = " + mission.getId();
 			try {
 				Statement stm = co.createStatement() ;
 				result = stm.executeUpdate(Query) ; 
@@ -120,7 +122,7 @@ public class MissionRessources {
 				
 				}	
 			} catch (SQLException e) {
-				e.printStackTrace();
+				System.out.println("Error insert Mission:   "+ e.getMessage());
 			} 
 			return mission ;	
 		}
@@ -139,7 +141,7 @@ public class MissionRessources {
 					return "delete Sucessful";
 				}	
 			} catch (SQLException e) {
-				e.printStackTrace();
+				System.out.println("Error insert Mission:   "+ e.getMessage());
 			} 
 			return "Impossible to delete";
 		}
