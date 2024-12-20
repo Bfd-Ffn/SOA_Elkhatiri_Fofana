@@ -73,7 +73,7 @@ public class UserRessources {
 					System.out.println("Error insert User ");
 				}
 			} catch (SQLException e) {
-				e.printStackTrace();
+				System.out.println("Error insert User:   "+ e.getMessage());
 			} 
 			return user ;	
 		}
@@ -99,8 +99,7 @@ public class UserRessources {
 				user = new User(Userid,username,password,type); 	
 			}	
 		} catch (SQLException e) {
-			e.printStackTrace();
-		} 
+			System.out.println("Error insert User:   "+ e.getMessage());		} 
 		return user ; 
 		
 	}
@@ -126,8 +125,7 @@ public class UserRessources {
 			
 			}	
 		} catch (SQLException e) {
-			e.printStackTrace();
-		} 
+			System.out.println("Error insert User:   "+ e.getMessage());		} 
 		return user ;	
 	}
 
@@ -151,8 +149,7 @@ public class UserRessources {
 			
 			}	
 		} catch (SQLException e) {
-			e.printStackTrace();
-		} 
+			System.out.println("Error insert User:   "+ e.getMessage());		} 
 		return "Impossible to delete";
 	}
 
